@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Twitter-Streaming-API-Sample</string>
+    <string name="activity_main_login">Log in</string>
 </resources>
