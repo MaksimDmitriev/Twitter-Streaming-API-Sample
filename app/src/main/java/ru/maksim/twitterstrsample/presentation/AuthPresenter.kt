@@ -4,4 +4,5 @@ import com.arellomobile.mvp.InjectViewState
 import com.arellomobile.mvp.MvpPresenter
 
 @InjectViewState
-class AuthPresenter : MvpPresenter<AuthView>() {}
+class AuthPresenter : MvpPresenter<AuthView>() {
+}
