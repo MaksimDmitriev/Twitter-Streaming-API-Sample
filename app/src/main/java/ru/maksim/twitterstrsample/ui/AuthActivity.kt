@@ -4,10 +4,11 @@ import android.os.Bundle
 import com.arellomobile.mvp.MvpAppCompatActivity
 import com.arellomobile.mvp.presenter.InjectPresenter
 import ru.maksim.twitterstrsample.R
+import ru.maksim.twitterstrsample.model.interactor.TwitterAuthApiUi
 import ru.maksim.twitterstrsample.presentation.AuthPresenter
 import ru.maksim.twitterstrsample.presentation.AuthView
 
-class AuthActivity : MvpAppCompatActivity(), AuthView {
+class AuthActivity : MvpAppCompatActivity(), AuthView, TwitterAuthApiUi {
 
     override fun login() {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
