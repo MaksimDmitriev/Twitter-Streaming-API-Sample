@@ -5,14 +5,26 @@ apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion 27
+    compileSdkVersion 26
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
     defaultConfig {
         applicationId "ru.maksim.twitterstrsample"
         minSdkVersion 15
-        targetSdkVersion 27
+        targetSdkVersion 26
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [ toothpick_registry_package_name : 'ru.maksim.twitterstrsample' ]
+            }
+        }
     }
     buildTypes {
         release {
@@ -23,7 +35,7 @@ android {
 }
 
 dependencies {
-    String supportLibraryVersion = "27.1.1"
+    String supportLibraryVersion = "26.1.0"
     String moxyVersion = "1.4.6"
     String toothPickVersion = "1.1.3"
 
