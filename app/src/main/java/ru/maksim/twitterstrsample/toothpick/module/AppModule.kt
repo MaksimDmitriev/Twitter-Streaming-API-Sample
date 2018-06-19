@@ -15,9 +15,7 @@ class AppModule(context: Context) : Module() {
 
         // Navigation
         val cicerone = Cicerone.create(AppRouter())
-        bind(Router::class.java).toInstance(cicerone.router)
         bind(AppRouter::class.java).toInstance(cicerone.router)
-        bind(NavigatorHolder::class.java).toInstance(cicerone.navigatorHolder)
     }
 
 }
